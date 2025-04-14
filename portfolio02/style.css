@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parisienne-regular {
+    font-family: "Parisienne", cursive;
+    font-size: 4000px;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fff8fc;
+    color: #333;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #cfa6f2;
+    color: #fff;
+    padding: 2rem;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    margin-bottom: 2rem;
+    font-size: 24px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    color: #fce4ff;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.hero {
+    background: linear-gradient(120deg, #e6ccff, #f9f0ff);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #a64bf4;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: #a64bf4;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #8d39cb;
+}
+
+.projects {
+    margin-top: 3rem;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #f2e6fc;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .hero {
+        text-align: center;
+    }
+}
