@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <input type="text" id="inputText">
+        <input type="text" id="inputText" disabled>
 
         <div id="buttons">
             <button class="button" onclick="addNumber('1')">1</button>
@@ -28,8 +28,8 @@
             <button class="button" onclick="addOperator('/')">/</button>
             <button class="button" onclick="addOperator('%')">%</button>
             <button class="button" onclick="addDecimal()">.</button>
-            <button class="button" onclick="delText()">DEL</button>
-            <button class="button" onclick="calculate()">=</button>
+            <button id="delete" class="button" onclick="delText()">DEL</button>
+            <button id="equal-button" class="button" onclick="calculate()">=</button>
         </div>
     </main>
 

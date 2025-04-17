@@ -1,21 +1,36 @@
-* {
-    margin: 0;
-    padding: 0;
-}
+/*615px - menor possível*/
 
+/*ajusta o tamanho para porcentagem*/
 body, html {
     width: 100%;
     height: 100%;
+    background-color:#f1f1f1;
 }
 
+#inputText {
+    background-color: #f1f1f1;
+}
+
+/*deixa eles em formato de tabela*/
 #buttons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 0fr);
 }
 
+#equal-button {
+    grid-column-end: -1;
+}
+
+/*quando add um atributo aqui o button deixa de ser funcional*/
 .button {
     margin: 2px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    background-color: #ffd7d7;
     border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/*teste*/
+button:hover {
+    background-color: #e9af6e;
 }
