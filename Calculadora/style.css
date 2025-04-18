@@ -1,36 +1,62 @@
-/*615px - menor possível*/
-
-/*ajusta o tamanho para porcentagem*/
 body, html {
     width: 100%;
     height: 100%;
-    background-color:#f1f1f1;
+    background-color: #fff0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #inputText {
-    background-color: #f1f1f1;
+    width: 80%;
+    height: 70px;
+    margin-bottom: 5px;
+    font-size: 40px;
+    padding: 10px;
+    border: 2px solid #c6c6c6;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
-/*deixa eles em formato de tabela*/
 #buttons {
     display: grid;
-    grid-template-columns: repeat(4, 0fr);
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.button {
+    font-size: 1.5rem;
+    background-color: #fff493;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffd500;
+}
+
+#delete {
+    background-color: #e40000;
+}
+
+#delete:hover {
+    background-color: #960000;
 }
 
 #equal-button {
+    grid-column: 2fr;
     grid-column-end: -1;
+    background-color: #3aae00;
 }
 
-/*quando add um atributo aqui o button deixa de ser funcional*/
-.button {
-    margin: 2px;
-    background-color: #ffd7d7;
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-}
-
-/*teste*/
-button:hover {
-    background-color: #e9af6e;
+#equal-button:hover {
+    background-color: #205f00;
 }
